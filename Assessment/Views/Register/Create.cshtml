@@ -1,0 +1,38 @@
+﻿@model RegisterViewModel
+
+<form method="post" asp-action="Create">
+    <div class="row p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add Register</h2>
+            <hr />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width:150px">Register</button>
+    <a asp-controller="Register" asp-action="index" class="btn btn-secondary" style="width:150px">Back</a>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }
